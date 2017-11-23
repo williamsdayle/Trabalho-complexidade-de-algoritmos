@@ -1,0 +1,315 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tabalhoanalisealg;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Disciplinas {
+
+    List<Disciplina> disciplinas;
+
+    //-------------------Criação dos objetos dos professores----------
+    Professor BrunoFai = new Professor("Bruno");
+    Professor Maisa = new Professor("Maisa");
+    Professor Mauricio = new Professor("Maurício");
+    Professor Cristiane = new Professor("Cristiane");
+    Professor Dellamura = new Professor("Wellington Dellamura");
+    Professor Tamara = new Professor("Tamara");
+    Professor Merlin = new Professor("Merlin");
+    Professor Marcio = new Professor("Hasegawa");
+    Professor Thiago = new Professor("Thiago");
+    Professor Glauco = new Professor("Glauco");
+    Professor Ailton = new Professor("Ailton");
+    Professor Fernando = new Professor("Fernando");
+    Professor Carlos = new Professor("Carlos");
+    Professor Luiz = new Professor("Luiz Renato");
+    Professor Menolli = new Professor("Menolli");
+    Professor Ricardo = new Professor("Ricardo");
+    Professor Daniela = new Professor("Daniela");
+    Professor Fabio = new Professor("Fabio");
+    Professor Biluka = new Professor("Biluka");
+
+    //------------------------- Primeiro Ano------------------------------
+    Disciplina calculo1 = new Disciplina("Cálculo 1", false, 4, false, "primeiro", Maisa);
+    Disciplina comunicacaoExpressao = new Disciplina("Comunicação e Expressão", false, 4, false, "primeiro", Maisa);
+    Disciplina programacao1 = new Disciplina("Programação 1", true, 4, false, "primeiro", BrunoFai);
+    Disciplina sistemasDigitais = new Disciplina("Sistemas Digitais", true, 4, false, "primeiro", Mauricio);
+    Disciplina sociologia = new Disciplina("Sociologia", false, 4, true, "primeiro", Cristiane);
+    Disciplina teoriaPratica = new Disciplina("Teoria e Prática", false, 2, false, "primeiro", Glauco);
+    Disciplina introducaoCC = new Disciplina("Introdução a CC", false, 2, false, "primeiro", Ailton);
+    Disciplina matematicaDiscreta = new Disciplina("Matemática Discreta", true, 3, false, "primeiro", Fernando);
+    Disciplina administracao = new Disciplina("Administração", false, 2, true, "primeiro", Carlos);
+    Disciplina computadorSociedade = new Disciplina("Computador e Sociedade", false, 4, true, "primeiro", Mauricio);
+
+    //---------------------------------------------------------------------
+    //-------------------------Segundo Ano---------------------------------
+    Disciplina teoriaComputacao = new Disciplina("Teoria da Computação", true, 4, false, "segundo", Dellamura);
+    Disciplina calculo2 = new Disciplina("Cálculo 2", false, 4, false, "segundo", Maisa);
+    Disciplina estruturaDados = new Disciplina("Estrutura de Dados", true, 4, false, "segundo", Tamara);
+    Disciplina metodologiaPesquisa = new Disciplina("Metodologia e Pesquisa", false, 4, true, "segundo", Tamara);
+    Disciplina programacao2 = new Disciplina("Programação 2", true, 4, false, "segundo", Merlin);
+    Disciplina algebraLinear = new Disciplina("Algebra Linear", false, 4, true, "segundo", Maisa);
+    Disciplina fisica = new Disciplina("Física", true, 3, false, "segundo", Marcio);
+    Disciplina arquiteturaComputadores = new Disciplina("Arquitetura de Computadores", true, 2, false, "segundo", Thiago);
+    Disciplina engenhariaSoftware = new Disciplina("Engenharia de Software", true, 4, true, "segundo", Mauricio);
+    Disciplina estatistica = new Disciplina("Probabilidade e Estatica", false, 4, true, "segundo", Luiz);
+
+    //-------------------------------------------------------------------
+    //------------------------Terceiro Ano-------------------------------
+    Disciplina engenhariaSoftware2 = new Disciplina("Engenharia de Software 2", true, 3, false, "terceiro", Menolli);
+    Disciplina LinguagensProgamacao = new Disciplina("Linguagens de Programação", true, 4, true, "terceiro", BrunoFai);
+    Disciplina bancoDados = new Disciplina("Banco de Dados", true, 4, false, "terceiro", Ailton);
+    Disciplina compiladores = new Disciplina("Compiladores", true, 4, false, "terceiro", Dellamura);
+    Disciplina sistemasOperacionais = new Disciplina("Sistemas Operacionais", true, 4, false, "terceiro", Thiago);
+    Disciplina redes = new Disciplina("Redes", true, 4, false, "terceiro", Ricardo);
+    Disciplina inteligenciaArtificial = new Disciplina("Inteligência Artificial", true, 4, false, "terceiro", Glauco);
+    Disciplina projetoAnalise = new Disciplina("Projeto Análise de Algoritmo", true, 2, false, "terceiro", BrunoFai);
+
+    //------------------------------------------------------------------
+    //---------------------------Quarto Ano-----------------------------
+    Disciplina empreendedorismo = new Disciplina("Empreendedorismo", false, 2, false, "quarto", Carlos);
+    Disciplina gerenciamentoProjeto = new Disciplina("Prática de Gerenciamento de Projeto", false, 4, true, "quarto", Daniela);
+    Disciplina interfaceHomemMaquina = new Disciplina("Interface Homem Máquina", true, 4, true, "quarto", Thiago);
+    Disciplina sistemasDistribuidos = new Disciplina("Sistemas Distribuidos", true, 4, false, "quarto", Ricardo);
+    Disciplina computacaoGrafica = new Disciplina("Computação Gráfica", true, 4, true, "quarto", Dellamura);
+    Disciplina engenhariaSoftware3 = new Disciplina("Engenharia de Software 3", true, 2, false, "quarto", Fabio);
+    Disciplina segurancaAuditoria = new Disciplina("Segurança Auditoria", false, 4, true, "quarto", Biluka);
+    Disciplina computacaoSimbolica = new Disciplina("Computação Símbolica", false, 4, true, "quarto", Fernando);
+    Disciplina informaticaEducacao = new Disciplina("Informática e Educação", false, 4, true, "quarto", Fabio);
+    //------------------------------------------------------------------
+
+    public Disciplinas() {
+
+        disciplinas = new ArrayList();
+        disciplinas.add(calculo1);
+        disciplinas.add(comunicacaoExpressao);
+        disciplinas.add(programacao1);
+        disciplinas.add(sistemasDigitais);
+        disciplinas.add(sociologia);
+        disciplinas.add(teoriaPratica);
+        disciplinas.add(introducaoCC);
+        disciplinas.add(matematicaDiscreta);
+        disciplinas.add(administracao);
+        disciplinas.add(computadorSociedade);
+        disciplinas.add(teoriaComputacao);
+        disciplinas.add(calculo2);
+        disciplinas.add(estruturaDados);
+        disciplinas.add(metodologiaPesquisa);
+        disciplinas.add(programacao2);
+        disciplinas.add(algebraLinear);
+        disciplinas.add(fisica);
+        disciplinas.add(arquiteturaComputadores);
+        disciplinas.add(engenhariaSoftware);
+        disciplinas.add(estatistica);
+        disciplinas.add(engenhariaSoftware2);
+        disciplinas.add(LinguagensProgamacao);
+        disciplinas.add(bancoDados);
+        disciplinas.add(compiladores);
+        disciplinas.add(sistemasOperacionais);
+        disciplinas.add(redes);
+        disciplinas.add(inteligenciaArtificial);
+        disciplinas.add(projetoAnalise);
+        disciplinas.add(empreendedorismo);
+        disciplinas.add(gerenciamentoProjeto);
+        disciplinas.add(interfaceHomemMaquina);
+        disciplinas.add(sistemasDistribuidos);
+        disciplinas.add(computacaoGrafica);
+        disciplinas.add(engenhariaSoftware3);
+        disciplinas.add(segurancaAuditoria);
+        disciplinas.add(computacaoSimbolica);
+        disciplinas.add(informaticaEducacao);
+
+    }
+
+    public Disciplina busca(String nome) {
+        Disciplina aux = null;
+
+        for (int i = 0; i < this.disciplinas.size(); i++) {
+            if (nome.equals(disciplinas.get(i).nome)) {
+                aux = disciplinas.get(i);
+            }
+
+        }
+        return aux;
+
+    }
+
+    public List disciplinaPorProfessor(String prof) {
+        List aux = new ArrayList();
+        for (int i = 0; i < this.disciplinas.size(); i++) {
+            if (this.disciplinas.get(i).professor.nome.equals(prof)) {
+                aux.add(this.disciplinas.get(i));
+            }
+        }
+
+        return aux;
+
+    }
+
+    public List disciplinasComLaboratorio() {
+        List<Disciplina> aux = new ArrayList();
+        for (int i = 0; i < this.disciplinas.size(); i++) {
+            if (disciplinas.get(i).laboratorio) {
+                aux.add(disciplinas.get(i));
+            }
+
+        }
+        return aux;
+    }
+
+    public List disciplinasSemestrais() {
+        List<Disciplina> aux = new ArrayList();
+        for (int i = 0; i < this.disciplinas.size(); i++) {
+            if (disciplinas.get(i).semestral) {
+                aux.add(disciplinas.get(i));
+            }
+
+        }
+        return aux;
+    }
+
+    public List disciplinasPorAno(String ano) {
+        List<Disciplina> aux = new ArrayList();
+        for (int i = 0; i < this.disciplinas.size(); i++) {
+            if (ano.equals(this.disciplinas.get(i).ano)) {
+                aux.add(disciplinas.get(i));
+            }
+
+        }
+        return aux;
+    }
+
+    public List todasDisciplinas() {
+        return this.disciplinas;
+    }
+
+    @Override
+    public String toString() {
+        String aux = "";
+        for (int i = 0; i < this.disciplinas.size(); i++) {
+            aux += "Nome =>" + this.disciplinas.get(i).nome + " Laboratorio =>" + this.disciplinas.get(i).laboratorio
+                    + " Semestral =>" + this.disciplinas.get(i).semestral + " Carga semanal =>" + this.disciplinas.get(i).cargaSemanal
+                    + " Ano =>" + this.disciplinas.get(i).ano + "\n";
+
+        }
+
+        return aux;
+    }
+
+    public int selecionarDisciplina(int ano) {
+        Random rand = new Random();
+        int numero = 0;
+        switch (ano) {
+            case 1:
+                numero = rand.nextInt(10);
+                break;
+            case 2:
+                numero = 10 + rand.nextInt(12);
+                break;
+            case 3:
+                numero = 22 + rand.nextInt(8);
+                break;
+            case 4:
+                numero = 30 + rand.nextInt(7);
+                break;
+            default:
+                break;
+        }
+
+        return numero;
+    }
+
+    public void espacosVazios(Disciplina grade[][][], int ano) {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (checarCargaHoraria(ano) == true) {
+                    if ("Vazio".equals(grade[i][j][ano - 1].nome)) {
+                        selecionarHorario(grade, i, j, ano - 1);
+                    }
+                } else {
+
+                    break;
+                }
+
+            }
+        }
+
+    }
+
+    public void selecionarHorario(Disciplina grade[][][], int x, int y, int z) {
+        int num;
+        boolean aux = true;
+        do {
+            aux = true;
+            num = selecionarDisciplina(z + 1);
+            if (disciplinas.get(num).professor.cargaHoraria[y] == 0) {
+                aux = false;
+                System.out.println("Oito horas passadas");
+            }
+            if (disciplinas.get(num).cargaSemanal == 0) {
+                aux = false;
+                if (checarCargaHoraria(z + 1) == false) {
+                    break;
+                }
+
+            }
+
+        } while (aux == false);
+
+        if (aux == true) {
+            disciplinas.get(num).cargaSemanal--;
+            disciplinas.get(num).professor.cargaHoraria[y]--;
+            grade[x][y][z] = disciplinas.get(num);
+        }
+
+    }
+
+    public boolean checarCargaHoraria(int ano) {
+        boolean disponivel = false;
+        if (ano == 1) {
+            for (int i = 0; i < 10; i++) {
+                if (disciplinas.get(i).cargaSemanal != 0) {                    
+                    disponivel = true;
+                }
+            }
+        }
+        if (ano == 2) {
+            for (int i = 11; i < 22; i++) {
+                if (disciplinas.get(i).cargaSemanal != 0) {
+               
+                    disponivel = true;
+                }
+            }
+
+        }
+        if (ano == 3) {
+            for (int i = 23; i < 30; i++) {
+                if (disciplinas.get(i).cargaSemanal != 0) {
+                    
+                    disponivel = true;
+                }
+            }
+
+        }
+        if (ano == 4) {
+            for (int i = 31; i < 37; i++) {
+                if (disciplinas.get(i).cargaSemanal != 0) {
+                    
+                    disponivel = true;
+                }
+            }
+
+        }
+
+        if (disponivel == false) {
+            System.out.println("Semana ja cheia de aula");
+        }
+        return disponivel;
+    }
+
+}
