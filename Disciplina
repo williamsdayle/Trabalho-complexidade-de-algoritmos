@@ -1,0 +1,46 @@
+package tabalhoanalisealg;
+
+public class Disciplina {
+
+    String nome;            // nome da disciplina
+    boolean laboratorio = false;        // aulas que necessitam de laboratorios
+    int cargaSemanal;       // numero de aulas semanais
+    boolean duplaAula;      // para as aulas que são maiores que 3 e podem ser divididas em dois dias
+    boolean semestral;
+    String ano;             // descrição de qual ano a disciplina pertence
+    Professor professor;    // professor dessa determinada diciplina
+    
+
+    public Disciplina(String nome, boolean lab, int cargaSemanal, boolean semestral, String ano, Professor professor) {
+        this.nome = nome;
+        this.laboratorio = lab;
+        this.cargaSemanal = cargaSemanal;
+        this.semestral = semestral;
+        this.ano = ano;
+        this.professor = professor;
+    }
+    
+    
+    public boolean carga(int cargaSemanal) {   // verificação se a aula pode ser divida em dois dias
+        if (cargaSemanal > 3) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+    
+    @Override
+    public String toString(){
+    String aux = "";
+    aux+="ANO =>" + this.ano +" NOME=>" + this.nome + "CARGA SEMANAL=>" +this.cargaSemanal +"DOIS DIAS NA SEMANA=>" + this.duplaAula +"USO DE LABORATORIO=>" + this.laboratorio +"NOME DO PROFESSOR=>" + this.professor.nome + "SEMESTRAL=>" + this.semestral;
+    return aux; 
+    
+    
+    
+    }
+    
+    
+    
+
+}
