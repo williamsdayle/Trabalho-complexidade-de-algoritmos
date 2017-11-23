@@ -1,0 +1,31 @@
+
+package tabalhoanalisealg;
+
+public class TabalhoAnaliseAlg {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Disciplinas disciplinas = new Disciplinas();
+        Horario grade = new Horario();
+        disciplinas.espacosVazios(grade.primeiroSemestre, 1);
+        disciplinas.espacosVazios(grade.primeiroSemestre, 2);
+        disciplinas.espacosVazios(grade.primeiroSemestre, 3);
+        disciplinas.espacosVazios(grade.primeiroSemestre, 4);
+        
+        System.out.println(grade.toString(1));
+        System.out.println("-------------------PRIMEIRO ANO -------------------");
+        
+        
+        System.out.println(grade.toString(2));
+         System.out.println("-------------------SEGUNDO ANO -------------------");
+        System.out.println(grade.toString(3));
+         System.out.println("-------------------TERCEIRO ANO -------------------");
+        System.out.println(grade.toString(4));
+         System.out.println("-------------------QUARTO ANO -------------------");
+        
+        
+    }
+    
+}
