@@ -5,10 +5,7 @@
  */
 package tabalhoanalisealg;
 
-/**
- *
- * @author souza
- */
+
 public class Horario {
 
     Disciplina primeiroSemestre[][][] = new Disciplina[8][5][4];
