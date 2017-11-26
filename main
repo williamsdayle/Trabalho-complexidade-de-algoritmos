@@ -1,7 +1,7 @@
 
-package tabalhoanalisealg;
+package trabalhoanalisealg;
 
-public class TabalhoAnaliseAlg {
+public class TrabalhoAnaliseAlg {
 
     /**
      * @param args the command line arguments
